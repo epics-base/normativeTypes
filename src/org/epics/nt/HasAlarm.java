@@ -10,6 +10,7 @@ import org.epics.pvdata.property.PVAlarm;
 
 /**
  * Interface for pvData type wrappers with, possibly optional, alarm field.
+ * <p>
  * The alarm field should be a PVStructure conformant to the alarm
  * type alarm_t described in the NormativeTypes specification, which may or
  * may not have field name "alarm".
@@ -18,17 +19,18 @@ import org.epics.pvdata.property.PVAlarm;
 public interface HasAlarm
 {
      /**
-      * Attach a PVAlarm.
+      * Attaches a PVAlarm to an alarm field.
+      * Will return false if there is no alarm field.
       *
-      * Will return false if no alarm field.
-      * @param pvAlarm The PVAlarm that will be attached.
-      * @return true if the operation was successfull, otherwise false.
+      * @param pvAlarm the PVAlarm to be attached
+      * @return true if the operation was successfull, otherwise false
       */
     public boolean attachAlarm(PVAlarm pvAlarm);
 
     /**
-     * Get the alarm field.
-     * @return PVStructure which may be null.
+     * Returns the alarm field.
+     *
+     * @return the alarm field or null if there is no alarm field
      */
     public PVStructure getAlarm();
 }

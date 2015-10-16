@@ -27,9 +27,10 @@ import java.util.ArrayList;
 public class NTNameValueBuilder
 {
     /**
-     * Set a value type of a NTNameValue.
-     * @param scalarType the value type.
-     * @return this instance of <b>NTNameValueBuilder</b>.
+     * Set a value type of an NTNameValue.
+     *
+     * @param scalarType the value type
+     * @return this instance of NTNameValueBuilder
      */
     public NTNameValueBuilder value(ScalarType scalarType)
     {
@@ -39,8 +40,9 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Add descriptor field to the NTNameValue.
-     * @return this instance of <b>NTNameValueBuilder</b>.
+     * Adds descriptor field to the NTNameValue.
+     *
+     * @return this instance of NTNameValueBuilder
      */
     public NTNameValueBuilder addDescriptor()
     {
@@ -49,8 +51,9 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Add alarm structure to the NTNameValue.
-     * @return this instance of <b>NTNameValueBuilder</b>.
+     * Adds alarm field to the NTNameValue.
+     *
+     * @return this instance of NTNameValueBuilder
      */
     public NTNameValueBuilder addAlarm()
     {
@@ -59,8 +62,9 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Add timeStamp structure to the NTNameValue.
-     * @return this instance of <b>NTNameValueBuilder</b>.
+     * Adds timeStamp field to the NTNameValue.
+     *
+     * @return this instance of NTNameValueBuilder
      */
     public NTNameValueBuilder addTimeStamp()
     {
@@ -69,9 +73,10 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Create a <b>Structure</b> that represents NTNameValue.
+     * Creates a Structure that represents NTNameValue.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>Structure</b>.
+     *
+     * @return a new instance of a Structure
      */
     public Structure createStructure()
     {
@@ -106,9 +111,10 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Create a <b>PVStructure</b> that represents NTNameValue.
+     * Creates a PVStructure that represents NTNameValue.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>PVStructure</b>.
+     *
+     * @return a new instance of a PVStructure
      */
     public PVStructure createPVStructure()
     {
@@ -116,9 +122,10 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Create a <b>NTNameValue</b> instance.
+     * Creates an NTNameValue instance.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>NTNameValue</b>.
+     *
+     * @return a new instance of an NTNameValue
      */
     public NTNameValue create()
     {
@@ -126,10 +133,11 @@ public class NTNameValueBuilder
     }
 
     /**
-     * Add extra <b>Field</b> to the type.
-     * @param name name of the field.
-     * @param field a field to add.
-     * @return this instance of <b>NTNameValueBuilder</b>.
+     * Adds extra Field to the type.
+     *
+     * @param name name of the field
+     * @param field a field to add
+     * @return this instance of NTNameValueBuilder
      */
     public NTNameValueBuilder add(String name, Field field) 
     {

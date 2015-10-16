@@ -30,7 +30,7 @@ import org.epics.pvdata.property.PVDisplay;
 import org.epics.pvdata.property.PVControl;
 
 /**
- * Convenience Class for data fields of a Normative Type
+ * Convenience Class for data fields of a Normative Type.
  *
  * @author dgh
  * 
@@ -38,15 +38,17 @@ import org.epics.pvdata.property.PVControl;
 public class PVNTField
 {
     /**
-     * get the single implementation of this class.
+     * Returns the single implementation of this class.
+     *
      * @return the implementation
      */
     public static PVNTField get() { return pvntField; }
 
     /**
-     * Create an enumerated PVStructure.
-     * @param choices The array of choices.
-     * @return an enumerated PVStructure.
+     * Creates an enumerated PVStructure.
+     *
+     * @param choices the array of choices
+     * @return an enumerated PVStructure
      */
     public PVStructure createEnumerated(
         String[] choices)
@@ -55,8 +57,9 @@ public class PVNTField
     }
 
     /**
-     * Create a timeStamp PVStructure.
-     * @return a timeStamp PVStructure.
+     * Creates a timeStamp PVStructure.
+     *
+     * @return a timeStamp PVStructure
      */
     public PVStructure createTimeStamp()
     {
@@ -65,8 +68,9 @@ public class PVNTField
     }
 
     /**
-     * Create an alarm PVStructure.
-     * @return an alarm PVStructure..
+     * Creates an alarm PVStructure.
+     *
+     * @return an alarm PVStructure
      */
     public PVStructure createAlarm()
     {
@@ -75,8 +79,9 @@ public class PVNTField
     }
 
     /**
-     * Create an alarmLimit PVStructure.
-     * @return an alarmLimit PVStructure.
+     * Creates an alarmLimit PVStructure.
+     *
+     * @return an alarmLimit PVStructure
      */
     public PVStructure createAlarmLimit()
     {
@@ -85,8 +90,9 @@ public class PVNTField
     }
 
     /**
-     * Create a display PVStructure.
-     * @return a display PVStructure.
+     * Creates a display PVStructure.
+     *
+     * @return a display PVStructure
      */
     public PVStructure createDisplay()
     {
@@ -95,8 +101,9 @@ public class PVNTField
     }
 
     /**
-     * Create a control PVStructure.
-     * @return a control PVStructure.
+     * Creates a control PVStructure.
+     *
+     * @return a control PVStructure
      */
     public PVStructure createControl()
     {
@@ -105,8 +112,9 @@ public class PVNTField
     }
 
     /**
-     * Create an enumerated PVStructureArray.
-     * @return an enumerated PVStructureArray.
+     * Creates an enumerated PVStructureArray.
+     *
+     * @return an enumerated PVStructureArray
      */
     public PVStructureArray createEnumeratedArray()
     {
@@ -116,7 +124,8 @@ public class PVNTField
     }
 
     /**
-     * Create a timeStamp PVStructureArray.
+     * Creates a timeStamp PVStructureArray.
+     *
      * @return a timeStamp PVStructureArray
      */
     public PVStructureArray createTimeStampArray()
@@ -127,8 +136,9 @@ public class PVNTField
     }
 
     /**
-     * Create an alarm PVStructureArray.
-     * @return an alarm PVStructureArray.
+     * Creates an alarm PVStructureArray.
+     *
+     * @return an alarm PVStructureArray
      */
     public PVStructureArray createAlarmArray()
     {

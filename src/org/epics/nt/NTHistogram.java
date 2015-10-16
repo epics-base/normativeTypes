@@ -19,7 +19,7 @@ import org.epics.pvdata.property.PVTimeStamp;
 import org.epics.pvdata.property.PVAlarm;
 
 /**
- * Wrapper class for NTHistogram
+ * Wrapper class for NTHistogram.
  *
  * @author dgh
  */
@@ -30,13 +30,14 @@ public class NTHistogram
 
     /**
      * Creates an NTHistogram wrapping the specified PVStructure if the latter is compatible.
-     *
-     * Checks the supplied structure is compatible with NTHistogram
-     * and if so returns a NTHistogram which wraps it.
+     * <p>
+     * Checks the supplied PVStructure is compatible with NTHistogram
+     * and if so returns an NTHistogram which wraps it.
      * This method will return null if the structure is is not compatible
      * or is null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTHistogram instance on success, null otherwise.
+     *
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTHistogram instance on success, null otherwise
      */
     public static NTHistogram wrap(PVStructure pvStructure)
     {
@@ -47,10 +48,11 @@ public class NTHistogram
 
     /**
      * Creates an NTHistogram wrapping the specified PVStructure, regardless of the latter's compatibility.
-     *
+     * <p>
      * No checks are made as to whether the specified PVStructure
      * is compatible with NTHistogram or is non-null.
-     * @param pvStructure The PVStructure to be wrapped.
+     *
+     * @param pvStructure the PVStructure to be wrapped.
      * @return NTHistogram instance.
      */
     public static NTHistogram wrapUnsafe(PVStructure pvStructure)
@@ -59,14 +61,15 @@ public class NTHistogram
     }
 
     /**
-     * Checks if the specified structure reports to be a compatible NTHistogram.
-     *
-     * Checks whether the specified structure reports compatibility with this
-     * version of NTHistogram through type ID, including checking version numbers.
+     * Returns whether the specified Structure reports to be a compatible NTHistogram.
+     * <p>
+     * Checks if the specified Structure reports compatibility with this
+     * version of NTHistogram through its type ID, including checking version numbers.
      * The return value does not depend on whether the structure is actually
-     * compatible in terms of its introspection type
-     * @param structure The Structure to test.
-     * @return (false,true) if (is not, is) a compatible NTHistogram.
+     * compatible in terms of its introspection type.
+     *
+     * @param structure the Structure to test.
+     * @return (false,true) if (is not, is) a compatible NTHistogram
      */
     public static boolean is_a(Structure structure)
     {
@@ -74,14 +77,15 @@ public class NTHistogram
     }
 
     /**
-     * Checks if the specified structure reports to be a compatible NTHistogram.
-     *
-     * Checks whether the specified structure reports compatibility with this
-     * version of NTHistogram through type ID, including checking version numbers.
+     * Returns whether the specified PVStructure reports to be a compatible NTHistogram.
+     * <p>
+     * Checks if the specified PVStructure reports compatibility with this
+     * version of NTHistogram through its type ID, including checking version numbers.
      * The return value does not depend on whether the structure is actually
-     * compatible in terms of its introspection type
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTHistogram.
+     * compatible in terms of its introspection type.
+     *
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTHistogram
      */
     public static boolean is_a(PVStructure pvStructure)
     {
@@ -89,12 +93,13 @@ public class NTHistogram
     }
 
     /**
-     * Checks if the specified structure is compatible with NTHistogram.
+     * Returns whether the specified Structure is compatible with NTHistogram.
+     * <p>
+     * Checks if the specified Structure is compatible with this version
+     * of NTHistogram through the introspection interface.
      *
-     * Checks whether the specified structure is compatible with this version
-     * of NTHistogram through introspection interface.
-     * @param structure The Structure to test.
-     * @return (false,true) if (is not, is) a compatible NTHistogram.
+     * @param structure the Structure to test
+     * @return (false,true) if (is not, is) a compatible NTHistogram
      */
     public static boolean isCompatible(Structure structure)
     {
@@ -139,12 +144,13 @@ public class NTHistogram
     }
 
     /**
-     * Checks if the specified structure is compatible with NTHistogram.
+     * Returns whether the specified PVStructure is compatible with NTHistogram.
+     * <p>
+     * Checks if the specified PVStructure is compatible with this version
+     * of NTHistogram through the introspection interface.
      *
-     * Checks whether the specified structure is compatible with this version
-     * of NTHistogram through introspection interface.
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTHistogram.
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTHistogram
      */
     public static boolean isCompatible(PVStructure pvStructure)
     {
@@ -154,11 +160,13 @@ public class NTHistogram
     }
 
     /**
-     * Checks if the specified structure is a valid NTHistogram.
+     * Returns whether the wrapped structure is valid with respect to this
+     * version of NTHistogram.
+     * <p>
+     * Unlike isCompatible(), isValid() may perform checks on the value
+     * data as well as the introspection data.
      *
-     * Checks whether the wrapped structure is valid with respect to this
-     * version of NTHistogram
-     * @return (false,true) if (is not, is) a valid NTHistogram.
+     * @return (false,true) if wrapped PVStructure (is not, is) a valid NTHistogram
      */
     public boolean isValid()
     {
@@ -166,7 +174,7 @@ public class NTHistogram
     }
 
     /**
-     * Create a NTHistogram builder instance.
+     * Creates an NTHistogram builder instance.
      * @return builder instance.
      */
     public static NTHistogramBuilder createBuilder()
@@ -175,8 +183,9 @@ public class NTHistogram
     }
 
     /**
-     * Get the pvStructure.
-     * @return PVStructure.
+     * Returns the PVStructure wrapped by this instance.
+     *
+     * @return the PVStructure wrapped by this instance
      */
     public PVStructure getPVStructure()
     {
@@ -184,8 +193,9 @@ public class NTHistogram
     }
 
     /**
-     * Get the ranges field.
-     * @return The PVDoubleArray for the values.
+     * Returns the ranges field.
+     *
+     * @return the ranges field
      */
     public PVDoubleArray getRanges()
     {
@@ -193,18 +203,21 @@ public class NTHistogram
     }
 
     /**
-     * Get the value field.
-     * @return The PVScalarArray for the values.
+     * Returns the value field.
+     *
+     * @return the value field
      */
     public PVScalarArray getValue()
     {
         return pvValue;
     }
 
-
-    /* Get the value field of a specified type.
-     * @param c expected class of a requested field (must be PVShortArray, PVIntArray or PVLongArray).
-     * @return The PVScalarArray or null if the subfield does not exist, or the field is not of <code>c</code> type.
+    /** 
+     * Returns the value of a specified type.
+     *
+     * @param <T> the expected type of the value field
+     * @param c class object modeling the class T (must be PVShortArray, PVIntArray or PVLongArray)
+     * @return the PVScalarArray or null if the subfield does not exist, or the field is not of <code>c</code> type
      */
     public <T extends PVScalarArray> T getValue(Class<T> c)
     {
@@ -214,10 +227,10 @@ public class NTHistogram
             return null;
     }
 
-
     /**
-     * Get the descriptor field.
-     * @return The pvString or null if no function field.
+     * Returns the descriptor field.
+     *
+     * @return the descriptor field or null if no such field
      */
     public PVString getDescriptor()
     {
@@ -273,8 +286,9 @@ public class NTHistogram
     }
 
     /**
-     * Constructor
-     * @param pvStructure The PVStructure to be wrapped.
+     * Constructor.
+     *
+     * @param pvStructure the PVStructure to be wrapped
      */
     NTHistogram(PVStructure pvStructure)
     {

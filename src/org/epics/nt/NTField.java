@@ -26,7 +26,7 @@ import org.epics.pvdata.property.PVControl;
 
 
 /**
- * Convenience Class for introspection fields of a Normative Type
+ * Convenience Class for introspection fields of a Normative Type.
  *
  * @author dgh
  * 
@@ -34,15 +34,17 @@ import org.epics.pvdata.property.PVControl;
 public class NTField {
 
     /**
-     * get the single implementation of this class.
+     * Returns the single implementation of this class.
+     *
      * @return the implementation
      */
     public static NTField get() { return ntstructureField; }
 
     /**
-     * Is field an enumerated structure.
-     * @param field The field to test.
-     * @return (false,true) if field (is not,is) an enumerated structure.
+     * Is field an enumerated structure?
+     *
+     * @param field the field to test
+     * @return (false,true) if field (is not,is) an enumerated structure
      */
     public boolean isEnumerated(Field field)
     {
@@ -72,9 +74,10 @@ public class NTField {
     }
 
     /**
-     * Is field a timeStamp structure.
-     * @param field The field to test.
-     * @return (false,true) if field (is not,is) a timeStamp structure.
+     * Is field a timeStamp structure?
+     *
+     * @param field the field to test
+     * @return (false,true) if field (is not,is) a timeStamp structure
      */
     public boolean isTimeStamp(Field field)
     {
@@ -107,9 +110,10 @@ public class NTField {
     }
 
     /**
-     * Is field an alarm structure.
-     * @param field The field to test.
-     * @return (false,true) if field (is not,is) an alarm structure.
+     * Is field an alarm structure?
+     *
+     * @param field the field to test
+     * @return (false,true) if field (is not,is) an alarm structure
      */
     public boolean isAlarm(Field field)
     {
@@ -143,9 +147,10 @@ public class NTField {
     }
 
     /**
-     * Is field a display structure.
-     * @param field The field to test.
-     * @return (false,true) if field (is not,is) a display structure.
+     * Is field a display structure?
+     *
+     * @param field the field to test
+     * @return (false,true) if field (is not,is) a display structure
      */
     public boolean isDisplay(Field field)
     {
@@ -185,8 +190,9 @@ public class NTField {
 
     /**
      * Is field an alarmLimit structure.
-     * @param field The field to test.
-     * @return (false,true) if field (is not,is) an alarmLimit structure.
+     *
+     * @param field the field to test
+     * @return (false,true) if field (is not,is) an alarmLimit structure
      */
     public boolean isAlarmLimit(Field field)
     {
@@ -240,9 +246,10 @@ public class NTField {
     }
 
     /**
-     * Is field a control structure.
-     * @param field The field to test.
-     * @return (false,true) if field (is not,is) a control structure.
+     * Is field a control structure?
+     *
+     * @param field the field to test
+     * @return (false,true) if field (is not,is) a control structure
      */
     public boolean isControl(Field field)
     {
@@ -275,8 +282,9 @@ public class NTField {
     }
 
     /**
-     * Create an enumerated structure.
-     * @return an enumerated structure.
+     * Creates an enumerated structure.
+     *
+     * @return an enumerated structure
      */
     public Structure createEnumerated()
     {
@@ -284,16 +292,18 @@ public class NTField {
     }
 
     /**
-     * Create a timeStamp structure.
-     * @return a timeStamp structure.
+     * Creates a timeStamp structure.
+     *
+     * @return a timeStamp structure
      */
     public Structure createTimeStamp()
     {
         return standardField.timeStamp();
     }
     /**
-     * Create an alarm structure.
-     * @return an alarm structure.
+     * Creates an alarm structure.
+     *
+     * @return an alarm structure
      */
     public Structure createAlarm()
     {
@@ -301,8 +311,9 @@ public class NTField {
     }
 
     /**
-     * Create an alarmLimit structure.
-     * @return an alarmLimit structure.
+     * Creates an alarmLimit structure.
+     *
+     * @return an alarmLimit structure
      */
     public Structure createAlarmLimit()
     {
@@ -322,8 +333,9 @@ public class NTField {
     }
 
     /**
-     * Create a display structure.
-     * @return a displayalarm structure.
+     * Creates a display structure.
+     *
+     * @return a display structure
      */
 
     public Structure createDisplay()
@@ -332,8 +344,9 @@ public class NTField {
     }
 
     /**
-     * Create a control structure.
-     * @return a control structure.
+     * Creates a control structure.
+     *
+     * @return a control structure
      */
     public Structure createControl()
     {    
@@ -341,8 +354,9 @@ public class NTField {
     }
 
     /**
-     * Create an array of enumerated structures.
-     * @return an array of enumerated structures.
+     * Creates an array of enumerated structures.
+     *
+     * @return an array of enumerated structures
      */
     public StructureArray createEnumeratedArray()
     {
@@ -350,8 +364,9 @@ public class NTField {
     }
 
     /**
-     * Create an array of timeStamp structures.
-     * @return an array of timeStamp structures.
+     * Creates an array of timeStamp structures.
+     *
+     * @return an array of timeStamp structures
      */
     public StructureArray createTimeStampArray()
     {
@@ -360,8 +375,9 @@ public class NTField {
     }
 
     /**
-     * Create an array of alarm structures.
-     * @return an array of alarm structures.
+     * Creates an array of alarm structures.
+     *
+     * @return an array of alarm structures
      */
     public StructureArray createAlarmArray()
     {

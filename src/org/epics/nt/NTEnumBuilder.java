@@ -25,8 +25,9 @@ import java.util.ArrayList;
 public class NTEnumBuilder
 {
     /**
-     * Add descriptor field to the NTEnum.
-     * @return this instance of <b>NTEnumBuilder</b>.
+     * Adds descriptor field to the NTEnum.
+     *
+     * @return this instance of NTEnumBuilder
      */
     public NTEnumBuilder addDescriptor()
     {
@@ -35,8 +36,9 @@ public class NTEnumBuilder
     }
 
     /**
-     * Add alarm structure to the NTEnum.
-     * @return this instance of <b>NTEnumBuilder</b>.
+     * Adds alarm field to the NTEnum.
+     *
+     * @return this instance of NTEnumBuilder
      */
     public NTEnumBuilder addAlarm()
     {
@@ -45,8 +47,9 @@ public class NTEnumBuilder
     }
 
     /**
-     * Add timeStamp structure to the NTEnum.
-     * @return this instance of <b>NTEnumBuilder</b>.
+     * Adds timeStamp field to the NTEnum.
+     *
+     * @return this instance of NTEnumBuilder
      */
     public NTEnumBuilder addTimeStamp()
     {
@@ -55,9 +58,10 @@ public class NTEnumBuilder
     }
 
     /**
-     * Create a <b>Structure</b> that represents NTEnum.
+     * Creates a Structure that represents NTEnum.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>Structure</b>.
+     *
+     * @return a new instance of a Structure
      */
     public Structure createStructure()
     {
@@ -88,9 +92,10 @@ public class NTEnumBuilder
     }
 
     /**
-     * Create a <b>PVStructure</b> that represents NTEnum.
+     * Creates a PVStructure that represents NTEnum.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>PVStructure</b>.
+     *
+     * @return a new instance of a PVStructure
      */
     public PVStructure createPVStructure()
     {
@@ -98,9 +103,10 @@ public class NTEnumBuilder
     }
 
     /**
-     * Create an <b>NTEnum</b> instance.
+     * Creates an NTEnum instance.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of an <b>NTEnum</b>.
+     *
+     * @return a new instance of an NTEnum
      */
     public NTEnum create()
     {
@@ -108,10 +114,11 @@ public class NTEnumBuilder
     }
 
     /**
-     * Add extra <b>Field</b> to the type.
-     * @param name name of the field.
-     * @param field a field to add.
-     * @return this instance of <b>NTEnumBuilder</b>.
+     * Adds extra Field to the type.
+     *
+     * @param name name of the field
+     * @param field a field to add
+     * @return this instance of NTEnumBuilder
      */
     public NTEnumBuilder add(String name, Field field) 
     {

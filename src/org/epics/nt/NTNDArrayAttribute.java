@@ -21,7 +21,7 @@ import org.epics.pvdata.property.PVDisplay;
 import org.epics.pvdata.property.PVControl;
 
 /**
- * Wrapper class for NTAttribute extended as required by NTNDArray
+ * Wrapper class for NTAttribute extended as required by NTNDArray.
  *
  * @author dgh
  */
@@ -31,13 +31,15 @@ public class NTNDArrayAttribute extends NTAttribute
 
     /**
      * Creates an NTNDArrayAttribute wrapping the specified PVStructure if the latter is compatible.
-     *
-     * Checks the supplied structure is compatible with NTAttribute as extended
-     * by NTNDArray and if so returns a NTAttribute which wraps it.
-     * This method will return null if the structure is not compatible
+     * <p>
+     * Checks the supplied PVStructure is compatible with NTAttribute
+     * extended as required by NTNDArray and if so returns an
+     * NTNDArrayAttribute which wraps it.
+     * This method will return null if the structure is is not compatible
      * or is null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTAttribute instance on success, null otherwise.
+     *
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTAttribute instance on success, null otherwise
      */
     public static NTNDArrayAttribute wrap(PVStructure pvStructure)
     {
@@ -48,11 +50,13 @@ public class NTNDArrayAttribute extends NTAttribute
 
     /**
      * Creates an NTNDArrayAttribute wrapping the specified PVStructure, regardless of the latter's compatibility.
-     *
+     * <p>
      * No checks are made as to whether the specified PVStructure
-     * is compatible with NTAttribute or is non-null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTAttribute instance.
+     * is compatible with NTAttribute extended as required by NTNDArray
+     * or is non-null.
+     * 
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTAttribute instance
      */
     public static NTNDArrayAttribute wrapUnsafe(PVStructure pvStructure)
     {
@@ -60,12 +64,15 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Checks if the specified structure is compatible with NTAttribute.
-     *
-     * Checks whether the specified structure is compatible with this version
-     * of NTAttribute through introspection interface.
-     * @param structure The Structure to test.
-     * @return (false,true) if (is not, is) a compatible NTAttribute.
+     * Returns whether the specified Structure is compatible with NTAttribute 
+     * extended as required by NTNDArray.
+     * <p>
+     * Checks if the specified Structure is compatible with this version
+     * of NTAttribute extended as required by this version of NTNDArray
+     * through the introspection interface.
+     * 
+     * @param structure the Structure to test
+     * @return (false,true) if (is not, is) a compatible NTAttribute
      */
     public static boolean isCompatible(Structure structure)
     {
@@ -96,12 +103,15 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Checks if the specified structure is compatible with NTAttribute.
-     *
-     * Checks whether the specified structure is compatible with this version
-     * of NTAttribute through introspection interface.
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTAttribute.
+     * Returns whether the specified PVStructure is compatible with NTAttribute
+     *  extended as required by NTNDArray..
+     * <p>
+     * Checks if the specified PVStructure is compatible with this version
+     * of NTAttribute extended as required by this version of NTNDArray
+     * through the introspection interface.
+
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTAttribute
      */
     public static boolean isCompatible(PVStructure pvStructure)
     {
@@ -111,8 +121,9 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Create an NTNDArrayAttribute builder instance.
-     * @return builder instance.
+     * Creates an NTNDArrayAttribute builder instance.
+     * 
+     * @return builder instance
      */
     public static NTNDArrayAttributeBuilder createBuilder()
     {
@@ -120,8 +131,9 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Get the pvStructure.
-     * @return PVStructure.
+     * Returns the PVStructure wrapped by this instance.
+     *
+     * @return the PVStructure wrapped by this instance
      */
     public PVStructure getPVStructure()
     {
@@ -129,17 +141,9 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Get the name field.
-     * @return The PVString for the name.
-     */
-    public PVString getSource()
-    {
-        return pvNTAttribute.getSubField(PVString.class, "source");
-    }
-
-    /**
-     * Get the namesourceType field.
-     * @return The PVInt for the name.
+     * Returns the sourceType field.
+     *
+     * @return the sourceType field
      */
     public PVInt getSourceType()
     {
@@ -147,8 +151,19 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Get the descriptor field.
-     * @return The PVString or null if no function field.
+     * Returns the source field.
+     *
+     * @return the source field
+     */
+    public PVString getSource()
+    {
+        return pvNTAttribute.getSubField(PVString.class, "source");
+    }
+
+    /**
+     * Returns the descriptor field.
+     *
+     * @return the descriptor field or null if no such field
      */
     public PVString getDescriptor()
     {
@@ -172,8 +187,9 @@ public class NTNDArrayAttribute extends NTAttribute
     }
 
     /**
-     * Constructor
-     * @param pvStructure The PVStructure to be wrapped.
+     * Constructor.
+     * 
+     * @param pvStructure the PVStructure to be wrapped
      */
     NTNDArrayAttribute(PVStructure pvStructure)
     {

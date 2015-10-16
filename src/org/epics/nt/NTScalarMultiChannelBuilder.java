@@ -27,10 +27,11 @@ import java.util.ArrayList;
 public class NTScalarMultiChannelBuilder
 {
     /**
-     * specify the union for the value field.
+     * Sets the scalar type of the value field elements
      * If this is not called then a variantUnion is the default.
-     * @param scalarType the scalar type of the value field.
-     * @return this instance of  <b>NTScalarMultiChannelBuilder</b>.
+     *
+     * @param scalarType the scalar type of the value field elements
+     * @return this instance of  NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder value(ScalarType scalarType)
     {
@@ -39,8 +40,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add descriptor field to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds descriptor field to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addDescriptor()
     {
@@ -49,8 +51,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add alarm structure to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds alarm structure to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addAlarm()
     {
@@ -59,8 +62,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add timeStamp structure to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds timeStamp field to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addTimeStamp()
     {
@@ -69,8 +73,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add severity array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds severity array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addSeverity()
     {
@@ -79,8 +84,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add status array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds status array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addStatus()
     {
@@ -89,8 +95,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add message array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds message array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addMessage()
     {
@@ -99,8 +106,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add secondsPastEpoch array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds secondsPastEpoch array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addSecondsPastEpoch()
     {
@@ -109,8 +117,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add nanoseconds array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds nanoseconds array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addNanoseconds()
     {
@@ -119,8 +128,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add userTag array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds userTag array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addUserTag()
     {
@@ -129,8 +139,9 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add isConnected array to the NTScalarMultiChannel.
-     * @return this instance of <b>NTScalarMultiChannelBuilder</b>.
+     * Adds isConnected array to the NTScalarMultiChannel.
+     *
+     * @return this instance of NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder addIsConnected()
     {
@@ -139,9 +150,10 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Create a <b>Structure</b> that represents NTScalarMultiChannel.
+     * Create a Structure that represents NTScalarMultiChannel.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>Structure</b>.
+     *
+     * @return a new instance of a Structure
      */
     public Structure createStructure()
     {
@@ -218,9 +230,10 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Create a <b>PVStructure</b> that represents NTScalarMultiChannel.
-     * This resets this instance state and allows new {@code instance to be created.}
-     * @return a new instance of a <b>PVStructure</b>
+     * Creates a PVStructure that represents NTScalarMultiChannel.
+     * This resets this instance state and allows new instance to be created.
+     *
+     * @return a new instance of a PVStructure
      */
     public PVStructure createPVStructure()
     {
@@ -228,9 +241,10 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Create a <b>NTScalarMultiChannel</b> instance.
-     * This resets this instance state and allows new {@code instance to be created.}
-     * @return a new instance of a <b>NTScalarMultiChannel</b>
+     * Creates an NTScalarMultiChannel instance.
+     * This resets this instance state and allows new instance to be created.
+     *
+     * @return a new instance of an NTScalarMultiChannel
      */
     public NTScalarMultiChannel create()
     {
@@ -238,10 +252,11 @@ public class NTScalarMultiChannelBuilder
     }
 
     /**
-     * Add extra <b>Field</b> to the type.
-     * @param name name of the field.
-     * @param field a field to add.
-     * @return this instance of a <b>NTScalarMultiChannelBuilder</b>
+     * Adds extra Field to the type.
+     *
+     * @param name the name of the field
+     * @param field the field to add
+     * @return this instance of an NTScalarMultiChannelBuilder
      */
     public NTScalarMultiChannelBuilder add(String name, Field field)
     {

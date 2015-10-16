@@ -22,7 +22,7 @@ import org.epics.pvdata.property.PVDisplay;
 import org.epics.pvdata.property.PVControl;
 
 /**
- * Wrapper class for NTMatrix
+ * Wrapper class for NTMatrix.
  *
  * @author dgh
  */
@@ -33,13 +33,14 @@ public class NTMatrix
 
     /**
      * Creates an NTMatrix wrapping the specified PVStructure if the latter is compatible.
-     *
-     * Checks the supplied structure is compatible with NTMatrix
-     * and if so returns a NTMatrix which wraps it.
+     * <p>
+     * Checks the supplied PVStructure is compatible with NTMatrix
+     * and if so returns an NTMatrix which wraps it.
      * This method will return null if the structure is is not compatible
      * or is null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTMatrix instance on success, null otherwise.
+     *
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTMatrix instance on success, null otherwise
      */
     public static NTMatrix wrap(PVStructure pvStructure)
     {
@@ -50,11 +51,12 @@ public class NTMatrix
 
     /**
      * Creates an NTMatrix wrapping the specified PVStructure, regardless of the latter's compatibility.
-     *
+     * <p>
      * No checks are made as to whether the specified PVStructure
      * is compatible with NTMatrix or is non-null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTMatrix instance.
+     *
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTMatrix instance
      */
     public static NTMatrix wrapUnsafe(PVStructure pvStructure)
     {
@@ -62,14 +64,15 @@ public class NTMatrix
     }
 
     /**
-     * Checks if the specified structure reports to be a compatible NTMatrix.
-     *
-     * Checks whether the specified structure reports compatibility with this
-     * version of NTMatrix through type ID, including checking version numbers.
+     * Returns whether the specified Structure reports to be a compatible NTMatrix.
+     * <p>
+     * Checks if the specified Structure reports compatibility with this
+     * version of NTMatrix through its type ID, including checking version numbers.
      * The return value does not depend on whether the structure is actually
-     * compatible in terms of its introspection type
-     * @param structure The structure to test.
-     * @return (false,true) if (is not, is) a compatible NTMatrix.
+     * compatible in terms of its introspection type.
+     *
+     * @param structure the structure to test
+     * @return (false,true) if (is not, is) a compatible NTMatrix
      */
     public static boolean is_a(Structure structure)
     {
@@ -77,14 +80,15 @@ public class NTMatrix
     }
 
     /**
-     * Checks if the specified structure reports to be a compatible NTMatrix.
-     *
-     * Checks whether the specified structure reports compatibility with this
-     * version of NTMatrix through type ID, including checking version numbers.
+     * Returns whether the specified PVStructure reports to be a compatible NTMatrix.
+     * <p>
+     * Checks if the specified PVStructure reports compatibility with this
+     * version of NTMatrix through its type ID, including checking version numbers.
      * The return value does not depend on whether the structure is actually
-     * compatible in terms of its introspection type
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTMatrix.
+     * compatible in terms of its introspection type.
+     *
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTMatrix
      */
     public static boolean is_a(PVStructure pvStructure)
     {
@@ -92,12 +96,13 @@ public class NTMatrix
     }
 
     /**
-     * Checks if the specified structure is compatible with NTMatrix.
+     * Returns whether the specified Structure is compatible with NTMatrix.
+     * <p>
+     * Checks if the specified Structure is compatible with this version
+     * of NTMatrix through the introspection interface.
      *
-     * Checks whether the specified structure is compatible with this version
-     * of NTMatrix through introspection interface.
-     * @param structure The Structure to test.
-     * @return (false,true) if (is not, is) a compatible NTMatrix.
+     * @param structure the Structure to test
+     * @return (false,true) if (is not, is) a compatible NTMatrix
      */
     public static boolean isCompatible(Structure structure)
     {
@@ -145,12 +150,13 @@ public class NTMatrix
     }
 
     /**
-     * Checks if the specified structure is compatible with NTMatrix.
+     * Returns whether the specified PVStructure is compatible with NTMatrix.
+     * <p>
+     * Checks if the specified PVStructure is compatible with this version
+     * of NTMatrix through the introspection interface.
      *
-     * Checks whether the specified structure is compatible with this version
-     * of NTMatrix through introspection interface.
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTMatrix.
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTMatrix
      */
     public static boolean isCompatible(PVStructure pvStructure)
     {
@@ -160,11 +166,13 @@ public class NTMatrix
     }
 
     /**
-     * Checks if the specified structure is a valid NTMatrix.
+     * Checks whether the wrapped PVStructure is valid with respect to this
+     * version of NTMatrix.
+     * <p>
+     * Unlike isCompatible(), isValid() may perform checks on the value
+     * data as well as the introspection data.
      *
-     * Checks whether the wrapped structure is valid with respect to this
-     * version of NTMatrix
-     * @return (false,true) if (is not, is) a valid NTMatrix.
+     * @return (false,true) if wrapped PVStructure (is not, is) a valid NTMatrix
      */
     public boolean isValid()
     {
@@ -193,8 +201,9 @@ public class NTMatrix
     }
 
     /**
-     * Create a NTMatrix builder instance.
-     * @return builder instance.
+     * Creates an NTMatrix builder instance.
+     *
+     * @return builder instance
      */
     public static NTMatrixBuilder createBuilder()
     {
@@ -202,8 +211,9 @@ public class NTMatrix
     }
 
     /**
-     * Get the pvStructure.
-     * @return PVStructure.
+     * Returns the PVStructure wrapped by this instance.
+     *
+     * @return the PVStructure wrapped by this instance
      */
     public PVStructure getPVStructure()
     {
@@ -211,8 +221,9 @@ public class NTMatrix
     }
 
     /**
-     * Get the value field.
-     * @return The PVDoubleArray for the values.
+     * Returns the value field.
+     *
+     * @return the value field
      */
     public PVDoubleArray getValue()
     {
@@ -220,8 +231,9 @@ public class NTMatrix
     }
 
     /**
-     * Get the dim field.
-     * @return The PVIntArray for the values.
+     * Returns the dim field.
+     *
+     * @return the dim field or or null if no such field
      */
     public PVIntArray getDim()
     {
@@ -229,8 +241,9 @@ public class NTMatrix
     }
 
     /**
-     * Get the descriptor field.
-     * @return The pvString or null if no function field.
+     * Returns the descriptor field.
+     *
+     * @return the descriptor field or null if no such field
      */
     public PVString getDescriptor()
     {
@@ -308,7 +321,8 @@ public class NTMatrix
 
     /**
      * Constructor
-     * @param pvStructure The PVStructure to be wrapped.
+     *
+     * @param pvStructure the PVStructure to be wrapped
      */
     NTMatrix(PVStructure pvStructure)
     {

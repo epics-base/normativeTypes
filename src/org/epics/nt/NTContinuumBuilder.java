@@ -26,8 +26,9 @@ import java.util.ArrayList;
 public class NTContinuumBuilder
 {
     /**
-     * Add descriptor field to the NTContinuum.
-     * @return this instance of <b>NTContinuumBuilder</b>.
+     * Adds descriptor field to the NTContinuum.
+     *
+     * @return this instance of NTContinuumBuilder
      */
     public NTContinuumBuilder addDescriptor()
     {
@@ -36,8 +37,9 @@ public class NTContinuumBuilder
     }
 
     /**
-     * Add alarm structure to the NTContinuum.
-     * @return this instance of <b>NTContinuumBuilder</b>.
+     * Adds alarm field to the NTContinuum.
+     *
+     * @return this instance of NTContinuumBuilder
      */
     public NTContinuumBuilder addAlarm()
     {
@@ -46,8 +48,9 @@ public class NTContinuumBuilder
     }
 
     /**
-     * Add timeStamp structure to the NTContinuum.
-     * @return this instance of <b>NTContinuumBuilder</b>.
+     * Adds timeStamp field to the NTContinuum.
+     *
+     * @return this instance of NTContinuumBuilder
      */
     public NTContinuumBuilder addTimeStamp()
     {
@@ -56,9 +59,10 @@ public class NTContinuumBuilder
     }
 
     /**
-     * Create a <b>Structure</b> that represents NTContinuum.
+     * Creates a Structure that represents NTContinuum.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>Structure</b>.
+     *
+     * @return a new instance of a Structure
      */
     public Structure createStructure()
     {
@@ -91,9 +95,10 @@ public class NTContinuumBuilder
     }
 
     /**
-     * Create a <b>PVStructure</b> that represents NTContinuum.
+     * Creates a PVStructure that represents NTContinuum.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>PVStructure</b>.
+     *
+     * @return a new instance of a PVStructure
      */
     public PVStructure createPVStructure()
     {
@@ -101,9 +106,10 @@ public class NTContinuumBuilder
     }
 
     /**
-     * Create a <b>NTContinuum</b> instance.
+     * Creates an NTContinuum instance.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>NTContinuum</b>.
+     *
+     * @return a new instance of an NTContinuum
      */
     public NTContinuum create()
     {
@@ -111,10 +117,11 @@ public class NTContinuumBuilder
     }
 
     /**
-     * Add extra <b>Field</b> to the type.
-     * @param name name of the field.
-     * @param field a field to add.
-     * @return this instance of <b>NTContinuumBuilder</b>.
+     * Adds extra Field to the type.
+     *
+     * @param name name of the field
+     * @param field a field to add
+     * @return this instance of NTContinuumBuilder
      */
     public NTContinuumBuilder add(String name, Field field) 
     {

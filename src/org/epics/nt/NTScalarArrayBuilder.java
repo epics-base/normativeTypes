@@ -26,9 +26,10 @@ import java.util.ArrayList;
 public class NTScalarArrayBuilder
 {
     /**
-     * Set a value type of a NTScalarArray.
-     * @param scalarType the scalar type of the value field.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Set a value type of an NTScalarArray.
+     * 
+     * @param scalarType the scalar type of the value field elements
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder value(ScalarType scalarType)
     {
@@ -38,8 +39,9 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Add descriptor field to the NTScalarArray.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Adds descriptor field to the NTScalarArray.
+     * 
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder addDescriptor()
     {
@@ -48,8 +50,9 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Add alarm structure to the NTScalarArray.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Adds alarm structure to the NTScalarArray.
+     * 
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder addAlarm()
     {
@@ -58,26 +61,31 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Add timeStamp structure to the NTScalarArray.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Adds timeStamp field to the NTScalarArray.
+     * 
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder addTimeStamp()
     {
         timeStamp = true;
         return this;
     }
+
     /**
-     * Add display structure to the NTScalarArray.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Adds display field to the NTScalarArray.
+     * 
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder addDisplay()
     {
         display = true;
         return this;
     }
+
     /**
-     * Add control structure to the NTScalarArray.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Adds control field to the NTScalarArray.
+     * 
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder addControl()
     {
@@ -86,9 +94,10 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Create a <b>Structure</b> that represents NTScalarArray.
+     * Creates a Structure that represents NTScalarArray.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>Structure</b>.
+     * 
+     * @return a new instance of a Structure
      */
     public Structure createStructure()
     {
@@ -128,9 +137,10 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Create a <b>PVStructure</b> that represents NTScalarArray.
+     * Creates a PVStructure that represents NTScalarArray.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>PVStructure</b>.
+     * 
+     * @return a new instance of a PVStructure
      */
     public PVStructure createPVStructure()
     {
@@ -138,9 +148,10 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Create a <b>NTScalarArray</b> instance.
+     * Creates an NTScalarArray instance.
      * This resets this instance state and allows new instance to be created.
-     * @return a new instance of a <b>NTScalarArray</b>.
+     * 
+     * @return a new instance of an NTScalarArray
      */
     public NTScalarArray create()
     {
@@ -148,10 +159,11 @@ public class NTScalarArrayBuilder
     }
 
     /**
-     * Add extra <b>Field</b> to the type.
-     * @param name name of the field.
-     * @param field a field to add.
-     * @return this instance of <b>NTScalarArrayBuilder</b>.
+     * Adds extra Field to the type.
+     * 
+     * @param name name of the field
+     * @param field a field to add
+     * @return this instance of NTScalarArrayBuilder
      */
     public NTScalarArrayBuilder add(String name, Field field) 
     {

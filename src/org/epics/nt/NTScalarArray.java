@@ -20,7 +20,7 @@ import org.epics.pvdata.property.PVDisplay;
 import org.epics.pvdata.property.PVControl;
 
 /**
- * Wrapper class for NTScalarArray
+ * Wrapper class for NTScalarArray.
  *
  * @author dgh
  */
@@ -31,13 +31,14 @@ public class NTScalarArray
 
     /**
      * Creates an NTScalarArray wrapping the specified PVStructure if the latter is compatible.
-     *
-     * Checks the supplied structure is compatible with NTScalarArray
-     * and if so returns a NTScalarArray which wraps it.
+     * <p>
+     * Checks the supplied PVStructure is compatible with NTScalarArray
+     * and if so returns an NTScalarArray which wraps it.
      * This method will return null if the structure is is not compatible
      * or is null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTScalarArray instance on success, null otherwise.
+     * 
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTScalarArray instance on success, null otherwise
      */
     public static NTScalarArray wrap(PVStructure pvStructure)
     {
@@ -48,11 +49,12 @@ public class NTScalarArray
 
     /**
      * Creates an NTScalarArray wrapping the specified PVStructure, regardless of the latter's compatibility.
-     *
+     * <p>
      * No checks are made as to whether the specified PVStructure
      * is compatible with NTScalarArray or is non-null.
-     * @param pvStructure The PVStructure to be wrapped.
-     * @return NTScalarArray instance.
+     * 
+     * @param pvStructure the PVStructure to be wrapped
+     * @return NTScalarArray instance
      */
     public static NTScalarArray wrapUnsafe(PVStructure pvStructure)
     {
@@ -60,14 +62,15 @@ public class NTScalarArray
     }
 
     /**
-     * Checks if the specified structure reports to be a compatible NTScalarArray.
-     *
-     * Checks whether the specified structure reports compatibility with this
-     * version of NTScalarArray through type ID, including checking version numbers.
+     * Returns whether the specified Structure reports to be a compatible NTScalarArray.
+     * <p>
+     * Checks if the specified Structure reports compatibility with this
+     * version of NTScalarArray through its type ID, including checking version numbers.
      * The return value does not depend on whether the structure is actually
-     * compatible in terms of its introspection type
-     * @param structure The structure to test.
-     * @return (false,true) if (is not, is) a compatible NTScalarArray.
+     * compatible in terms of its introspection type.
+     * 
+     * @param structure the Structure to test
+     * @return (false,true) if (is not, is) a compatible NTScalarArray
      */
     public static boolean is_a(Structure structure)
     {
@@ -75,28 +78,29 @@ public class NTScalarArray
     }
 
     /**
-     * Checks if the specified structure reports to be a compatible NTScalarArray.
-     *
-     * Checks whether the specified structure reports compatibility with this
-     * version of NTScalarArray through type ID, including checking version numbers.
+     * Returns whether the specified PVStructure reports to be a compatible NTScalarArray.
+     * <p>
+     * Checks if the specified PVStructure reports compatibility with this
+     * version of NTScalarArray through its type ID, including checking version numbers.
      * The return value does not depend on whether the structure is actually
-     * compatible in terms of its introspection type
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTScalarArray.
+     * compatible in terms of its introspection type.
+     * 
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTScalarArray
      */
     public static boolean is_a(PVStructure pvStructure)
     {
         return is_a(pvStructure.getStructure());
     }
 
-
     /**
-     * Checks if the specified structure is compatible with NTScalarArray.
-     *
-     * Checks whether the specified structure is compatible with this version
-     * of NTScalarArray through introspection interface.
-     * @param structure The Structure to test.
-     * @return (false,true) if (is not, is) a compatible NTScalarArray.
+     * Returns whether the specified Structure is compatible with NTScalarArray.
+     * <p>
+     * Checks if the specified Structure is compatible with this version
+     * of NTScalarArray through the introspection interface.
+     * 
+     * @param structure the Structure to test.
+     * @return (false,true) if (is not, is) a compatible NTScalarArray
      */
     public static boolean isCompatible(Structure structure)
     {
@@ -136,12 +140,13 @@ public class NTScalarArray
     }
 
     /**
-     * Checks if the specified structure is compatible with NTScalarArray.
-     *
-     * Checks whether the specified structure is compatible with this version
-     * of NTScalarArray through introspection interface.
-     * @param pvStructure The PVStructure to test.
-     * @return (false,true) if (is not, is) a compatible NTScalarArray.
+     * Returns whether the specified PVStructure is compatible with NTScalarArray.
+     * <p>
+     * Checks if the specified PVStructure is compatible with this version
+     * of NTScalarArray through the introspection interface.
+     * 
+     * @param pvStructure the PVStructure to test
+     * @return (false,true) if (is not, is) a compatible NTScalarArray
      */
     public static boolean isCompatible(PVStructure pvStructure)
     {
@@ -151,11 +156,12 @@ public class NTScalarArray
     }
 
     /**
-     * Checks if the specified structure is a valid NTScalarArray.
+     * Returns whether the wrapped PVStructure is a valid NTScalarArray.
+     * <p>
+     * Unlike isCompatible(), isValid() may perform checks on the value
+     * data as well as the introspection data.
      *
-     * Checks whether the wrapped structure is valid with respect to this
-     * version of NTScalar
-     * @return (false,true) if (is not, is) a valid NTScalarArray.
+     * @return (false,true) if wrapped PVStructure (is not, is) a valid NTScalarArray.
      */
     public boolean isValid()
     {
@@ -163,8 +169,9 @@ public class NTScalarArray
     }
 
     /**
-     * Create a NTScalarArray builder instance.
-     * @return builder instance.
+     * Creates an NTScalarArray builder instance.
+     * 
+     * @return builder instance
      */
     public static NTScalarArrayBuilder createBuilder()
     {
@@ -172,8 +179,9 @@ public class NTScalarArray
     }
 
     /**
-     * Get the pvStructure.
-     * @return PVStructure.
+     * Returns the PVStructure wrapped by this instance.
+     *
+     * @return the PVStructure wrapped by this instance
      */
     public PVStructure getPVStructure()
     {
@@ -181,17 +189,21 @@ public class NTScalarArray
     }
 
     /**
-     * Get the value field.
-     * @return The PVScalarArray for the values.
+     * Returns the value field.
+     * 
+     * @return the value field
      */
     public PVScalarArray getValue()
     {
         return pvValue;
     }
 
-    /* Get the value field of a specified type (e.g. PVDoubleArray).
-     * @param c expected class of a requested field.
-     * @return The PVScalarArray or null if the subfield does not exist, or the field is not of <code>c</code> type.
+    /**
+     * Returns the value field of a specified type (e.g. PVDoubleArray).
+     * 
+     * @param <T> the expected type of the value field
+     * @param c class object modeling the class T
+     * @return the value field or null the field is not of <code>c</code> type
      */
     public <T extends PVScalarArray> T getValue(Class<T> c)
     {
@@ -202,8 +214,9 @@ public class NTScalarArray
     }
 
     /**
-     * Get the descriptor field.
-     * @return The pvString or null if no function field.
+     * Returns the descriptor field.
+     *
+     * @return the descriptor field or null if no such field
      */
     public PVString getDescriptor()
     {
@@ -299,8 +312,9 @@ public class NTScalarArray
     }
 
     /**
-     * Constructor
-     * @param pvStructure The PVStructure to be wrapped.
+     * Constructor.
+     *
+     * @param pvStructure the PVStructure to be wrapped
      */
     NTScalarArray(PVStructure pvStructure)
     {
