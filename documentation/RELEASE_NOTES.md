@@ -1,5 +1,11 @@
-Release 0.1
-===========
+Release 0.1.3
+=============
+
+No changes except for pom versions.
+
+
+Release 0.1.2
+=============
 
 This is the first release of normativeTypesJava.
 
@@ -22,7 +28,7 @@ following Normative Types:
 *   NTUnion
 *   NTScalarMultiChannel
 
-Release 0.1 therefore implements fully the
+Release 0.1.2 therefore implements fully the
 [16 Mar 2015 version](http://epics-pvdata.sourceforge.net/alpha/normativeTypes/normativeTypes_20150316.html)
  of the normativeTypes specification.
 
