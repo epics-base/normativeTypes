@@ -1,3 +1,11 @@
+Release 0.2
+===========
+
+There are no changes from the 0.1 release except for version numbers and
+
+* New combined license and copyright. Source headers are updated for this.
+* pom uses parent pom.
+
 Release 0.1
 ===========
 
