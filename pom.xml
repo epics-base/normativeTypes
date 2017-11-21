@@ -29,5 +29,9 @@
             <artifactId>epics-pvdata</artifactId>
         </dependency>
     </dependencies>
-
+    <scm>
+    	<url>https://github.com/epics-base/normativeTypesJava</url>
+    	<connection>scm:git:https://github.com/epics-base/normativeTypesJava</connection>
+    	<developerConnection>scm:git:https://github.com/epics-base/normativeTypesJava</developerConnection>
+  </scm>
 </project>
